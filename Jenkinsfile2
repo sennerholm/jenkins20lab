@@ -6,7 +6,8 @@ node {
    
    stage 'Build'
      echo 'Building...'
-     sh "echo $BUILD_TAG > utilartefact.txt"
+     sh "env"
+     sh 'echo $BUILD_TAG > utilartefact.txt'
      archive "utilartefact.txt"
      sleep 3
  }
