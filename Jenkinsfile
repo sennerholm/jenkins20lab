@@ -3,6 +3,7 @@ node {
    stage 'Checkout'   
      git url: 'https://github.com/sennerholm/doodleshop.git'
      sh "ls"
+     sh "env"
    
    stage 'Build'
      echo 'Building...'
