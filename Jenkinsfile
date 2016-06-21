@@ -1,9 +1,9 @@
 node {
  
    stage 'Checkout'   
-     checkout url: 'https://github.com/sennerholm/doodleshop.git'
+     git url: 'https://github.com/sennerholm/doodleshop.git'
      sh "ls"
- 
+   
    stage 'Build'
      echo 'Building...'
      sleep 3
