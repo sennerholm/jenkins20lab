@@ -7,8 +7,15 @@ node {
    
    stage 'Build'
      echo 'Building...'
-     unarchive 
-     sh "ls" 
+     echo 'Fetching artifacts'
+     copyArtifacts('UtilLabClass') {
+            includePatterns('utilartefact.txt')
+            buildSelector {
+                latestSuccessful(true)
+            }
+        } 
+     sh "ls"
+     sh "cat utilartefact.txt" 
      sleep 3
  
  
