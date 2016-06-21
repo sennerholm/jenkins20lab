@@ -7,6 +7,8 @@ node {
    
    stage 'Build'
      echo 'Building...'
+     unarchive 
+     sh "ls" 
      sleep 3
  
  
