@@ -8,7 +8,7 @@ node {
    stage 'Build'
      echo 'Building...'
      echo 'Fetching artifacts'
-     step([$class: 'CopyArtifacts', includePatterns: 'utilartefact.txt'])
+     step([$class: 'CopyArtifact', includePatterns: 'utilartefact.txt'])
     
      sh "ls"
      sh "cat utilartefact.txt" 
