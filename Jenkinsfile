@@ -8,12 +8,8 @@ node {
    stage 'Build'
      echo 'Building...'
      echo 'Fetching artifacts'
-     copyArtifacts('UtilLabClass') {
-            includePatterns('utilartefact.txt')
-            buildSelector {
-                latestSuccessful(true)
-            }
-        } 
+     step([$class: 'copyArtifacts', includePatterns: 'utilartefact.txt'])
+    
      sh "ls"
      sh "cat utilartefact.txt" 
      sleep 3
