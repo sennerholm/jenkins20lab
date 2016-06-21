@@ -1,7 +1,7 @@
 node {
  
    stage 'Checkout'   
-     checkout  url: 'https://github.com/sennerholm/doodleshop.git
+     checkout url: 'https://github.com/sennerholm/doodleshop.git'
      sh "ls"
  
    stage 'Build'
